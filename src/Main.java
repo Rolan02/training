@@ -11,5 +11,9 @@ public class Main {
         Car.imprimirDetalles(toyota);
         Car.imprimirDetalles(mitsubishi);
         Car.imprimirDetalles(mazda);
+
+        User.imprimirUsuarios(juan);
+        User.imprimirUsuarios(pedrito);
+        User.imprimirUsuarios(roberto);
     }
 }

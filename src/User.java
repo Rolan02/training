@@ -32,4 +32,11 @@ public class User {
     public void setCi(int ci) {
         this.ci = ci;
     }
+    public static void imprimirUsuarios(User aux) {
+        System.out.println("================");
+        System.out.println("Nombre : " + aux.getName());
+        System.out.println("Saldo : " + aux.getMoney() );
+        System.out.println("Numero de Carnet: " + aux.getCi());
+        System.out.println("================");
+    }
 }
