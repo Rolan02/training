@@ -1,3 +1,4 @@
+import java.util.*;
 public class Car {
 
     //Propiedas de la clase
@@ -65,15 +66,20 @@ public class Car {
         this.price = price;
     }
 
-    //Metodo para imprimir las propiedades del auto
-    public static void imprimirDetalles(Car aux) {
-        System.out.println("================");
-        System.out.println("El auto es : " + aux.getName());
-        System.out.println("Su modelo es : " + aux.getModel());
-        System.out.println("Su color  es : " + aux.getColor() );
-        System.out.println("Tipo de Motor : " + aux.getEngine() );
-        System.out.println("Con el numero de placa : " + aux.getPlaca());
-        System.out.println("Su precio es : " + aux.getPrice());
-        System.out.println("================");
+    // Formato para imprimir los objetos de Car
+    @Override
+    public String toString() {
+        return "\nNombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor() + "\nMotor: " + getEngine();
+    }
+
+    // Metodo que filtra los autos segun el precio ingresado por el usuario
+    public static void findByPrice(List<Car> cars, int price){
+        cars.stream().filter(car -> car.getPrice() <= price).forEach(System.out::println);
+    }
+    public static void findByModel(List<Car> cars, int model){
+
+    }
+    public static void findByEngine(List<Car> cars, int engine){
+
     }
 }
