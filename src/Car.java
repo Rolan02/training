@@ -18,7 +18,6 @@ public class Car {
         this.placa = placa;
         this.price = price;
     }
-
     public String getName(){
         return name;
     }
@@ -76,10 +75,15 @@ public class Car {
     public static void findByPrice(List<Car> cars, int price){
         cars.stream().filter(car -> car.getPrice() <= price).forEach(System.out::println);
     }
+    //metodo que filtra los autos segun su modelo
     public static void findByModel(List<Car> cars, int model){
-
+        cars.stream().filter(car -> car.getModel() == model).forEach(System.out::println);
     }
-    public static void findByEngine(List<Car> cars, int engine){
-
+    //metodo que filtra por numero de motor
+    public static void findByEngine(List<Car> cars, String engine){
+        cars.stream().filter(car -> car.getEngine().equals(engine)).forEach(System.out::println);
+    }
+    public static void findByColor(List<Car> cars, String color){
+        cars.stream().filter(car -> car.getColor().equals(color)).forEach(System.out::println);
     }
 }
