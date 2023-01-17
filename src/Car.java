@@ -76,20 +76,14 @@ public class Car {
         cars.stream().filter(car -> car.getPrice() <= price).forEach(System.out::println);
     }
     //metodo que filtra los autos segun su modelo
-    public static void findByModel(List<Car> year, int model){
-        year.stream().filter(car -> car.getModel() >= model). forEach(System.out::println);
+    public static void findByModel(List<Car> cars, int model){
+        cars.stream().filter(car -> car.getModel() == model).forEach(System.out::println);
     }
     //metodo que filtra por numero de motor
-    public static void findByEngine(Car car){
-        System.out.println("======================");
-        System.out.println("El Auto : " + car.getName());
-        System.out.println("motor : " + car.getEngine());
-        System.out.println("======================");
+    public static void findByEngine(List<Car> cars, String engine){
+        cars.stream().filter(car -> car.getEngine().equals(engine)).forEach(System.out::println);
     }
-    public static void findByColor(Car colors){
-        System.out.println("======================");
-        System.out.println("El Auto : " + colors.getName());
-        System.out.println("color : " + colors.getColor());
-        System.out.println("======================");
+    public static void findByColor(List<Car> cars, String color){
+        cars.stream().filter(car -> car.getColor().equals(color)).forEach(System.out::println);
     }
 }
