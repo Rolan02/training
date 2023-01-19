@@ -37,4 +37,7 @@ public class Bycicle {
     public static void findByModel(List<Bycicle> bycycles, int model) {
         bycycles.stream().filter(car -> car.getModel() == model).forEach(System.out::println);
     }
+    public static void findByColor(List<Bycicle> bycycles, String color) {
+        bycycles.stream().filter(car -> car.getColor().equals(color)).forEach(System.out::println);
+    }
 }

@@ -98,8 +98,12 @@ public class Main {
                         System.out.println("========== Vehiculos disponibles por Color ========");
                         String color = read.next();
                         String col = color.toLowerCase();
-                        System.out.println("Buscando por color........");
+                        System.out.println("Buscando por color de autos........");
                         Car.findByColor(cars,col);
+                        System.out.println("Buscando por color de motos........");
+                        Motocycle.findByColor(motocycles,col);
+                        System.out.println("Buscando por color de bicicletas........");
+                        Bycicle.findByColor(bycicles,col);
                         System.out.println("===========================================================");
                         break;
                     case 5:
