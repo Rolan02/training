@@ -72,6 +72,10 @@ public class Main {
                         amount = sn.nextInt();
                         System.out.println("========== Vehiculos disponibles para su presupuesto ========");
                         Car.findByPrice(cars,amount);
+                        System.out.println("========== Motos disponibles para su presupuesto ========");
+                        Motocycle.findByPrice(motocycles,amount);
+                        System.out.println("========== Bicicletas disponibles para su presupuesto ========");
+                        Bycicle.findByPrice(bycicles,amount);
                         System.out.println("===========================================================");
                         break;
                     case 2:
