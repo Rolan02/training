@@ -41,6 +41,6 @@ public class Bycicle {
         bycycles.stream().filter(car -> car.getColor().equals(color)).forEach(System.out::println);
     }
     public static void findByPrice (List < Bycicle > bycycles,int price){
-        bycycles.stream().filter(car -> car.getPrice() == price).forEach(System.out::println);
+        bycycles.stream().filter(car -> car.getPrice() <= price).forEach(System.out::println);
     }
 }

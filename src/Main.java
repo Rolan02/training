@@ -67,7 +67,7 @@ public class Main {
                 switch (option) {
                     case 1:
                         Scanner price = new Scanner(System.in);
-                        System.out.println("Ingrese su Precio maximo....");
+                        System.out.println("Ingrese su Precio estimado");
                         int amount;
                         amount = sn.nextInt();
                         System.out.println("========== Vehiculos disponibles para su presupuesto ========");
