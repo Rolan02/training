@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Bycicle {
     private String name;
     private String color;
@@ -25,5 +27,14 @@ public class Bycicle {
 
     public int getPrice() {
         return price;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor() + "\n";
+    }
+
+    public static void findByModel(List<Bycicle> bycycles, int model) {
+        bycycles.stream().filter(car -> car.getModel() == model).forEach(System.out::println);
     }
 }

@@ -12,6 +12,18 @@ public class Main {
         Car mercedes_benz = new Car("Mercedes_benz",2005,"celeste","v7",1369, 35000);
         Car chevrolet = new Car("chevrolet",2023,"verde","v9",7825,30000);
 
+        Bycicle venzo = new Bycicle("venzo","blanco",2010,2000);
+        Bycicle venzito = new Bycicle("venzito","negro",2015,1200);
+        Bycicle veloshe = new Bycicle("veloshe","amarillo",2018,2500);
+        Bycicle sport = new Bycicle("sport","gris",2020,3500);
+        Bycicle argon = new Bycicle("argon","verde",2005,3000);
+
+        Motocycle pegasus =  new Motocycle("pegasus","negro","v6",2015,1534,10000);
+        Motocycle suzuki =  new Motocycle("suzuki","rojo","v8",2010,15354,15000);
+        Motocycle bmw =  new Motocycle("bmw","rojo","v5",2005,1654,18000);
+        Motocycle junior =  new Motocycle("junior","verde","v8",2010,15334,20000);
+
+
         List<Car> cars = new ArrayList<Car>();
         cars.add(toyota);
         cars.add(mitsubishi);
@@ -19,6 +31,20 @@ public class Main {
         cars.add(BMW);
         cars.add(mercedes_benz);
         cars.add(chevrolet);
+
+        List<Bycicle> bycicles =  new ArrayList<Bycicle>();
+        bycicles.add(venzo);
+        bycicles.add(venzito);
+        bycicles.add(veloshe);
+        bycicles.add(sport);
+        bycicles.add(argon);
+
+        List<Motocycle> motocycles =  new ArrayList<Motocycle>();
+        motocycles.add(junior);
+        motocycles.add(bmw);
+        motocycles.add(suzuki);
+        motocycles.add(pegasus);
+
 
         //Scanner nos sirve para recuperar datos ingresados desde el teclado del usuario
         Scanner sn = new Scanner(System.in);
@@ -52,8 +78,12 @@ public class Main {
                         System.out.println("Buscando por modelo........");
                         int model;
                         model = sn.nextInt();
-                        System.out.println("========== Vehiculos disponibles por Modelo ========");
+                        System.out.println("========== Autos disponibles por Modelo ========");
                         Car.findByModel(cars,model);
+                        System.out.println("========== Motos disponibles por Modelo ========");
+                        Motocycle.findByModel(motocycles,model);
+                        System.out.println("========== Bicicletas disponibles por Modelo ========");
+                        Bycicle.findByModel(bycicles,model);
                         System.out.println("===========================================================");
                         break;
                     case 3:

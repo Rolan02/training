@@ -68,7 +68,7 @@ public class Car {
     // Formato para imprimir los objetos de Car
     @Override
     public String toString() {
-        return "\nNombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor() + "\nMotor: " + getEngine();
+        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor() + "\nMotor: " + getEngine()+ "\n";
     }
 
     // Metodo que filtra los autos segun el precio ingresado por el usuario

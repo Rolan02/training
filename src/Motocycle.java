@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Motocycle {
     private String name;
     private String color;
@@ -37,5 +39,13 @@ public class Motocycle {
 
     public int getPrice() {
         return price;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor() + "\nMotor: " + getEngine()+ "\n";
+    }
+    public static void findByModel(List<Motocycle> motocycles, int model) {
+        motocycles.stream().filter(car -> car.getModel() == model).forEach(System.out::println);
     }
 }
