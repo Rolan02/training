@@ -94,8 +94,10 @@ public class Main {
                         System.out.println("Buscando por motor.....");
                         String engine = read.next();
                         String var = engine.toLowerCase();
-                        System.out.println("========== Vehiculos disponibles por Motor ========");
+                        System.out.println("========== Autos disponibles por Motor ========");
                         Car.findByEngine(cars,var);
+                        System.out.println("========== Motos disponibles por Motor ========");
+                        Motocycle.findByEngine(motocycles,var);
                         System.out.println("===========================================================");
                         break;
                     case 4:

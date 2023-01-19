@@ -51,4 +51,7 @@ public class Motocycle {
     public static void findByPrice(List<Motocycle> motocycles, int price) {
         motocycles.stream().filter(car -> car.getPrice() == price).forEach(System.out::println);
     }
+    public static void findByEngine(List<Motocycle> motocycles, String var) {
+        motocycles.stream().filter(car -> car.getEngine().equals(var)).forEach(System.out::println);
+    }
 }
