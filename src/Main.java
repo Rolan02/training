@@ -104,7 +104,7 @@ public class Main {
                         System.out.println("========== Vehiculos disponibles por Color ========");
                         String color = read.next();
                         String col = color.toLowerCase();
-                        System.out.println("========== Vehiculos disponibles por color ========");
+                        System.out.println("========== Autos disponibles por color ========");
                         Car.findByColor(cars,col);
                         System.out.println("========== Motos disponibles por color ========");
                         Motocycle.findByColor(motocycles,col);
