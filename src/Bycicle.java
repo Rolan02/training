@@ -37,4 +37,8 @@ public class Bycicle {
     public static void findByModel(List<Bycicle> bycycles, int model) {
         bycycles.stream().filter(car -> car.getModel() == model).forEach(System.out::println);
     }
+  
+    public static void findByPrice(List<Bycicle> bycycles, int price) {
+        bycycles.stream().filter(car -> car.getPrice() == price).forEach(System.out::println);
+    }
 }
