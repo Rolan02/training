@@ -48,4 +48,7 @@ public class Motocycle {
     public static void findByModel(List<Motocycle> motocycles, int model) {
         motocycles.stream().filter(car -> car.getModel() == model).forEach(System.out::println);
     }
+    public static void findByEngine(List<Motocycle> motocycles, String var) {
+        motocycles.stream().filter(car -> car.getEngine().equals(var)).forEach(System.out::println);
+    }
 }
