@@ -11,7 +11,7 @@ hs_err_pid*
 ##############################
 ## IntelliJ
 ##############################
-out/
+out/production
 .idea/
 .idea_modules/
 *.iml
@@ -27,3 +27,4 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+/out/
