@@ -1,4 +1,4 @@
-public class Motorcycle {
+public class Motocycle {
     private String name;
     private String color;
     private String engine;
@@ -6,7 +6,7 @@ public class Motorcycle {
     private int placa;
     private int price;
 
-    public Motorcycle(String name, String color, String engine, int model, int placa, int price) {
+    public Motocycle(String name, String color, String engine, int model, int placa, int price) {
         this.name = name;
         this.color = color;
         this.engine = engine;

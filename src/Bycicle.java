@@ -1,10 +1,10 @@
-public class bycicle {
+public class Bycicle {
     private String name;
     private String color;
     private int model;
     private int price;
 
-    public bycicle(String name, String color, int model, int price) {
+    public Bycicle(String name, String color, int model, int price) {
         this.name = name;
         this.color = color;
         this.model = model;
