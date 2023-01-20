@@ -5,54 +5,53 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Car toyota = new Car("Toyota",2000,"blanco","v8",1599, 15000);
-        Car mitsubishi = new Car("mitsubishi",2010,"negro","v6",1598, 20000);
-        Car mazda = new Car("mazda",2020,"rojo","v5",8598,25000);
-        Car BMW = new Car("BMW",2020,"amarillo","v10",1587, 40000);
-        Car mercedes_benz = new Car("Mercedes_benz",2005,"celeste","v7",1369, 35000);
-        Car chevrolet = new Car("chevrolet",2023,"verde","v9",7825,30000);
+        Vehicle toyota = new Car("Toyota","blanco",2010,25000,"v6", 1241);
+        Vehicle mazda = new Car("Mazda","gris",2015,15000,"v6", 1241);
+        Vehicle mitsubishi = new Car("mitsubishi","amarillo",2020,35000,"v6", 1241);
+        Vehicle bmw = new Car("bmw","blanco",2015,25000,"v8", 1241);
+        Vehicle mercedesBenz = new Car("mercedesBenz","verde",2020,18000,"v8", 1241);
 
-        Bycicle venzo = new Bycicle("venzo","blanco",2010,2000);
-        Bycicle venzito = new Bycicle("venzito","negro",2015,1200);
-        Bycicle veloshe = new Bycicle("veloshe","amarillo",2018,2500);
-        Bycicle sport = new Bycicle("sport","gris",2020,3500);
-        Bycicle argon = new Bycicle("argon","verde",2005,3000);
+        Vehicle venzo = new Bycicle("venzo","blanco",2010,2000);
+        Vehicle venzito = new Bycicle("venzito","negro",2015,1200);
+        Vehicle veloshe = new Bycicle("veloshe","amarillo",2018,2500);
+        Vehicle sport = new Bycicle("sport","gris",2020,3500);
+        Vehicle argon = new Bycicle("argon","verde",2005,3000);
 
-        Motocycle pegasus =  new Motocycle("pegasus","negro","v6",2015,1534,10000);
-        Motocycle suzuki =  new Motocycle("suzuki","rojo","v8",2010,15354,15000);
-        Motocycle bmw =  new Motocycle("bmw","rojo","v5",2005,1654,18000);
-        Motocycle junior =  new Motocycle("junior","verde","v8",2010,15334,20000);
+        Vehicle pegasus = new Motocycle("pegasus","verde",2010,1800,"v6", 1241);
+        Vehicle suzuki = new Motocycle("suzuki","amarillo",2015,11000,"v8", 1241);
+        Vehicle junior = new Motocycle("junior","verde",2020,1900,"v6", 1241);
+        Vehicle pong = new Motocycle("pong","negro",2022,1600,"v8", 1241);
+        Vehicle dior = new Motocycle("dior","blanco",2005,1200,"v6", 1241);
 
-
-        List<Car> cars = new ArrayList<Car>();
+        List<Vehicle> cars = new ArrayList<>();
         cars.add(toyota);
         cars.add(mitsubishi);
         cars.add(mazda);
-        cars.add(BMW);
-        cars.add(mercedes_benz);
-        cars.add(chevrolet);
+        cars.add(bmw);
+        cars.add(mercedesBenz);
 
-        List<Bycicle> bycicles =  new ArrayList<Bycicle>();
+        List<Vehicle> bycicles =  new ArrayList<>();
         bycicles.add(venzo);
         bycicles.add(venzito);
         bycicles.add(veloshe);
         bycicles.add(sport);
         bycicles.add(argon);
 
-        List<Motocycle> motocycles =  new ArrayList<Motocycle>();
-        motocycles.add(junior);
-        motocycles.add(bmw);
-        motocycles.add(suzuki);
+        List<Vehicle> motocycles =  new ArrayList<>();
         motocycles.add(pegasus);
+        motocycles.add(suzuki);
+        motocycles.add(junior);
+        motocycles.add(pong);
+        motocycles.add(dior);
 
+        IVehicle vehicle = new IVehicle() {};
+        IVehicleMotor vehicleMotor = new IVehicleMotor() {};
 
-        //Scanner nos sirve para recuperar datos ingresados desde el teclado del usuario
         Scanner sn = new Scanner(System.in);
         Scanner read = new Scanner(System.in);
 
         boolean exit = false;
         int option;
-
         while(!exit) {
             System.out.println("===== Buscador de Vehiculos =====");
             System.out.println("1.- Buscar por precio");
@@ -71,11 +70,11 @@ public class Main {
                         int amount;
                         amount = sn.nextInt();
                         System.out.println("========== Vehiculos disponibles para su presupuesto ========");
-                        Car.findByPrice(cars,amount);
+                        vehicle.findByPrice(cars,amount);
                         System.out.println("========== Motos disponibles para su presupuesto ========");
-                        Motocycle.findByPrice(motocycles,amount);
+                        vehicle.findByPrice(motocycles,amount);
                         System.out.println("========== Bicicletas disponibles para su presupuesto ========");
-                        Bycicle.findByPrice(bycicles,amount);
+                        vehicle.findByPrice(bycicles,amount);
                         System.out.println("===========================================================");
                         break;
                     case 2:
@@ -83,11 +82,11 @@ public class Main {
                         int model;
                         model = sn.nextInt();
                         System.out.println("========== Autos disponibles por Modelo ========");
-                        Car.findByModel(cars,model);
+                        vehicle.findByModel(cars,model);
                         System.out.println("========== Motos disponibles por Modelo ========");
-                        Motocycle.findByModel(motocycles,model);
+                        vehicle.findByModel(motocycles,model);
                         System.out.println("========== Bicicletas disponibles por Modelo ========");
-                        Bycicle.findByModel(bycicles,model);
+                        vehicle.findByModel(bycicles,model);
                         System.out.println("===========================================================");
                         break;
                     case 3:
@@ -95,9 +94,9 @@ public class Main {
                         String engine = read.next();
                         String var = engine.toLowerCase();
                         System.out.println("========== Autos disponibles por Motor ========");
-                        Car.findByEngine(cars,var);
+                        vehicleMotor.findByEngine(cars,var);
                         System.out.println("========== Motos disponibles por Motor ========");
-                        Motocycle.findByEngine(motocycles,var);
+                        vehicleMotor.findByEngine(motocycles,var);
                         System.out.println("===========================================================");
                         break;
                     case 4:
@@ -105,11 +104,11 @@ public class Main {
                         String color = read.next();
                         String col = color.toLowerCase();
                         System.out.println("========== Autos disponibles por color ========");
-                        Car.findByColor(cars,col);
+                        vehicle.findByColor(cars,col);
                         System.out.println("========== Motos disponibles por color ========");
-                        Motocycle.findByColor(motocycles,col);
+                        vehicle.findByColor(motocycles,col);
                         System.out.println("========== Bicicletas disponibles por color ========");
-                        Bycicle.findByColor(bycicles,col);
+                        vehicle.findByColor(bycicles,col);
                         System.out.println("===========================================================");
                         break;
                     case 5:

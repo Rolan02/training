@@ -1,46 +1,12 @@
 import java.util.List;
 
-public class Bycicle {
-    private String name;
-    private String color;
-    private int model;
-    private int price;
+public class Bycicle extends Vehicle implements IVehicle {
 
     public Bycicle(String name, String color, int model, int price) {
-        this.name = name;
-        this.color = color;
-        this.model = model;
-        this.price = price;
+        super(name, color, model, price);
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public int getModel() {
-        return model;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
     @Override
     public String toString() {
         return "Nombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor() + "\n";
-    }
-
-    public static void findByModel(List<Bycicle> bycycles, int model) {
-        bycycles.stream().filter(car -> car.getModel() == model).forEach(System.out::println);
-    }
-    public static void findByColor(List<Bycicle> bycycles, String color) {
-        bycycles.stream().filter(car -> car.getColor().equals(color)).forEach(System.out::println);
-    }
-    public static void findByPrice (List < Bycicle > bycycles,int price){
-        bycycles.stream().filter(car -> car.getPrice() <= price).forEach(System.out::println);
     }
 }
