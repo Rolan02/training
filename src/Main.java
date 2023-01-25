@@ -23,6 +23,12 @@ public class Main {
         Vehicle pong = new Motocycle("pong","negro",2022,1600,"v8", 1241);
         Vehicle dior = new Motocycle("dior","blanco",2005,1200,"v6", 1241);
 
+        Vehicle capix = new Skateboard("capix","Cafe",2018,1300,15);
+        Vehicle nikeSb = new Skateboard("nikeSb","rojo",2015,1500,17);
+        Vehicle circar = new Skateboard("circar","negro",2015,1650,14);
+        Vehicle rbk = new Skateboard("rbk","gris",2020,1960,13);
+        Vehicle baker = new Skateboard("baker","verde",2022,10200,12);
+
         List<Vehicle> cars = new ArrayList<>();
         cars.add(toyota);
         cars.add(mitsubishi);
@@ -44,8 +50,17 @@ public class Main {
         motocycles.add(pong);
         motocycles.add(dior);
 
+        List<Vehicle> skateboards = new ArrayList<>();
+        skateboards.add(capix);
+        skateboards.add(nikeSb);
+        skateboards.add(circar);
+        skateboards.add(rbk);
+        skateboards.add(baker);
+
         IVehicle vehicle = new IVehicle() {};
         IVehicleMotor vehicleMotor = new IVehicleMotor() {};
+        IVehicleSice vehicleSice = new IVehicleSice() {};
+
 
         Scanner sn = new Scanner(System.in);
         Scanner read = new Scanner(System.in);
@@ -58,7 +73,8 @@ public class Main {
             System.out.println("2.- Buscar por modelo");
             System.out.println("3.- Buscar por motor");
             System.out.println("4.- Buscar por color");
-            System.out.println("5.- Salir");
+            System.out.println("5.- Buscar por tamaño");
+            System.out.println("6.- Salir");
 
             try {
                 System.out.println("Escribe una de las opciones");
@@ -75,6 +91,8 @@ public class Main {
                         vehicle.findByPrice(motocycles,amount);
                         System.out.println("========== Bicicletas disponibles para su presupuesto ========");
                         vehicle.findByPrice(bycicles,amount);
+                        System.out.println("========== Skateboards disponibles para su presupuesto ========");
+                        vehicle.findByPrice(skateboards,amount);
                         System.out.println("===========================================================");
                         break;
                     case 2:
@@ -87,6 +105,8 @@ public class Main {
                         vehicle.findByModel(motocycles,model);
                         System.out.println("========== Bicicletas disponibles por Modelo ========");
                         vehicle.findByModel(bycicles,model);
+                        System.out.println("========== Skateboards disponibles por Modelo ========");
+                        vehicle.findByModel(skateboards,model);
                         System.out.println("===========================================================");
                         break;
                     case 3:
@@ -109,9 +129,17 @@ public class Main {
                         vehicle.findByColor(motocycles,col);
                         System.out.println("========== Bicicletas disponibles por color ========");
                         vehicle.findByColor(bycicles,col);
+                        System.out.println("========== Skateboards disponibles por color ========");
+                        vehicle.findByColor(skateboards,col);
                         System.out.println("===========================================================");
                         break;
                     case 5:
+                        System.out.println("Ingrese el tamaño de la Skateborad que desea");
+                        int sice;
+                        sice = sn.nextInt();
+                        System.out.println("========== Skateboards disponibles por Tamaño ========");
+                        vehicleSice.findBySice(skateboards,sice);
+                        case 6:
                         exit = true;
                         break;
                     default:
