@@ -1,15 +1,154 @@
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Car toyota = new Car("Toyota",2000,"Blanco","v8",1599, 15000);
-        Car mitsubishi = new Car("mitsubishi",2010,"Negro","v6",1598, 20000);
-        Car mazda = new Car("mazda",2020,"ROjo","v6",8598,25000);
 
-        User juan = new User("Juan Perez",22000, 9501064);
-        User pedrito = new User("Pedrito Perez",100000, 9505064);
-        User roberto = new User("Roberto Perez",16000, 9501964);
+        Vehicle toyota = new Car("Toyota","blanco",2010,25000,"v6", 1241);
+        Vehicle mazda = new Car("Mazda","gris",2015,15000,"v6", 1241);
+        Vehicle mitsubishi = new Car("mitsubishi","amarillo",2020,35000,"v6", 1241);
+        Vehicle bmw = new Car("bmw","blanco",2015,25000,"v8", 1241);
+        Vehicle mercedesBenz = new Car("mercedesBenz","verde",2020,18000,"v8", 1241);
 
-        Car.imprimirDetalles(toyota);
-        Car.imprimirDetalles(mitsubishi);
-        Car.imprimirDetalles(mazda);
+        Vehicle venzo = new Bycicle("venzo","blanco",2010,2000);
+        Vehicle venzito = new Bycicle("venzito","negro",2015,1200);
+        Vehicle veloshe = new Bycicle("veloshe","amarillo",2018,2500);
+        Vehicle sport = new Bycicle("sport","gris",2020,3500);
+        Vehicle argon = new Bycicle("argon","verde",2005,3000);
+
+        Vehicle pegasus = new Motocycle("pegasus","verde",2010,1800,"v6", 1241);
+        Vehicle suzuki = new Motocycle("suzuki","amarillo",2015,11000,"v8", 1241);
+        Vehicle junior = new Motocycle("junior","verde",2020,1900,"v6", 1241);
+        Vehicle pong = new Motocycle("pong","negro",2022,1600,"v8", 1241);
+        Vehicle dior = new Motocycle("dior","blanco",2005,1200,"v6", 1241);
+
+        Vehicle capix = new Skateboard("capix","Cafe",2018,1300,15);
+        Vehicle nikeSb = new Skateboard("nikeSb","rojo",2015,1500,17);
+        Vehicle circar = new Skateboard("circar","negro",2015,1650,14);
+        Vehicle rbk = new Skateboard("rbk","gris",2020,1960,13);
+        Vehicle baker = new Skateboard("baker","verde",2022,10200,12);
+
+        List<Vehicle> cars = new ArrayList<>();
+        cars.add(toyota);
+        cars.add(mitsubishi);
+        cars.add(mazda);
+        cars.add(bmw);
+        cars.add(mercedesBenz);
+
+        List<Vehicle> bycicles =  new ArrayList<>();
+        bycicles.add(venzo);
+        bycicles.add(venzito);
+        bycicles.add(veloshe);
+        bycicles.add(sport);
+        bycicles.add(argon);
+
+        List<Vehicle> motocycles =  new ArrayList<>();
+        motocycles.add(pegasus);
+        motocycles.add(suzuki);
+        motocycles.add(junior);
+        motocycles.add(pong);
+        motocycles.add(dior);
+
+        List<Vehicle> skateboards = new ArrayList<>();
+        skateboards.add(capix);
+        skateboards.add(nikeSb);
+        skateboards.add(circar);
+        skateboards.add(rbk);
+        skateboards.add(baker);
+
+        IVehicle vehicle = new IVehicle() {};
+        IVehicleMotor vehicleMotor = new IVehicleMotor() {};
+        IVehicleSice vehicleSice = new IVehicleSice() {};
+
+
+        Scanner sn = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);
+
+        boolean exit = false;
+        int option;
+        while(!exit) {
+            System.out.println("===== Buscador de Vehiculos =====");
+            System.out.println("1.- Buscar por precio");
+            System.out.println("2.- Buscar por modelo");
+            System.out.println("3.- Buscar por motor");
+            System.out.println("4.- Buscar por color");
+            System.out.println("5.- Buscar por tamaño");
+            System.out.println("6.- Salir");
+
+            try {
+                System.out.println("Escribe una de las opciones");
+                option = sn.nextInt();
+                switch (option) {
+                    case 1:
+                        Scanner price = new Scanner(System.in);
+                        System.out.println("Ingrese su Precio estimado");
+                        int amount;
+                        amount = sn.nextInt();
+                        System.out.println("========== Vehiculos disponibles para su presupuesto ========");
+                        vehicle.findByPrice(cars,amount);
+                        System.out.println("========== Motos disponibles para su presupuesto ========");
+                        vehicle.findByPrice(motocycles,amount);
+                        System.out.println("========== Bicicletas disponibles para su presupuesto ========");
+                        vehicle.findByPrice(bycicles,amount);
+                        System.out.println("========== Skateboards disponibles para su presupuesto ========");
+                        vehicle.findByPrice(skateboards,amount);
+                        System.out.println("===========================================================");
+                        break;
+                    case 2:
+                        System.out.println("Buscando por modelo........");
+                        int model;
+                        model = sn.nextInt();
+                        System.out.println("========== Autos disponibles por Modelo ========");
+                        vehicle.findByModel(cars,model);
+                        System.out.println("========== Motos disponibles por Modelo ========");
+                        vehicle.findByModel(motocycles,model);
+                        System.out.println("========== Bicicletas disponibles por Modelo ========");
+                        vehicle.findByModel(bycicles,model);
+                        System.out.println("========== Skateboards disponibles por Modelo ========");
+                        vehicle.findByModel(skateboards,model);
+                        System.out.println("===========================================================");
+                        break;
+                    case 3:
+                        System.out.println("Buscando por motor.....");
+                        String engine = read.next();
+                        String var = engine.toLowerCase();
+                        System.out.println("========== Autos disponibles por Motor ========");
+                        vehicleMotor.findByEngine(cars,var);
+                        System.out.println("========== Motos disponibles por Motor ========");
+                        vehicleMotor.findByEngine(motocycles,var);
+                        System.out.println("===========================================================");
+                        break;
+                    case 4:
+                        System.out.println("========== Vehiculos disponibles por Color ========");
+                        String color = read.next();
+                        String col = color.toLowerCase();
+                        System.out.println("========== Autos disponibles por color ========");
+                        vehicle.findByColor(cars,col);
+                        System.out.println("========== Motos disponibles por color ========");
+                        vehicle.findByColor(motocycles,col);
+                        System.out.println("========== Bicicletas disponibles por color ========");
+                        vehicle.findByColor(bycicles,col);
+                        System.out.println("========== Skateboards disponibles por color ========");
+                        vehicle.findByColor(skateboards,col);
+                        System.out.println("===========================================================");
+                        break;
+                    case 5:
+                        System.out.println("Ingrese el tamaño de la Skateborad que desea");
+                        int sice;
+                        sice = sn.nextInt();
+                        System.out.println("========== Skateboards disponibles por Tamaño ========");
+                        vehicleSice.findBySice(skateboards,sice);
+                        case 6:
+                        exit = true;
+                        break;
+                    default:
+                        System.out.println("Solo opciones de 1 a 4");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Opcion incorrecta ingresa un numero");
+                sn.next();
+            }
+        }
     }
 }
