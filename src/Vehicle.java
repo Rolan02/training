@@ -3,11 +3,13 @@ public class Vehicle {
     private String color;
     private int model;
     private int price;
-    public Vehicle(String name, String color, int model, int price) {
+    private int pasajer;
+    public Vehicle(String name, String color, int model, int price, int pasajer) {
         this.name = name;
         this.color = color;
         this.model = model;
         this.price = price;
+        this.pasajer = pasajer;
     }
     public String getName() {
         return name;
@@ -24,4 +26,6 @@ public class Vehicle {
     public int getPrice() {
         return price;
     }
+    public int getPasajer() {return pasajer;}
+
 }
