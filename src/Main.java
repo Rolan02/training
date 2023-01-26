@@ -139,7 +139,8 @@ public class Main {
                         sice = sn.nextInt();
                         System.out.println("========== Skateboards disponibles por Tamaño ========");
                         vehicleSice.findBySice(skateboards,sice);
-                        case 6:
+                        break;
+                    case 6:
                         exit = true;
                         break;
                     default:
