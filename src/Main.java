@@ -33,6 +33,11 @@ public class Main {
         Vehicle titan = new Balloon("titan","rojo",2015,1500,7,9);
         Vehicle fury = new Balloon("fury","negro",2015,1650,15,20);
 
+        Vehicle cessna = new Airplane("cessna","rojo",2022,22000,20,20);
+        Vehicle boeing = new Airplane("boeing","gris",2020,25000,25,25);
+        Vehicle bombardier = new Airplane("bombardier","negro",15000,15,15,20);
+        Vehicle airbus = new Airplane("airbus","verde",2012,10000,10,20);
+
         List<Vehicle> cars = new ArrayList<>();
         cars.add(toyota);
         cars.add(mitsubishi);
@@ -47,7 +52,7 @@ public class Main {
         bycicles.add(sport);
         bycicles.add(argon);
 
-        List<Vehicle> motocycles =  new ArrayList<>();
+        List<Vehicle> motocycles = new ArrayList<>();
         motocycles.add(pegasus);
         motocycles.add(suzuki);
         motocycles.add(junior);
@@ -65,6 +70,12 @@ public class Main {
         ballons.add(rex);
         ballons.add(titan);
         ballons.add(fury);
+
+        List<Vehicle> Airplanes = new ArrayList<>();
+        Airplanes.add(cessna);
+        Airplanes.add(boeing);
+        Airplanes.add(bombardier);
+        Airplanes.add(airbus);
 
         IVehicle vehicle = new IVehicle() {};
         IVehicleMotor vehicleMotor = new IVehicleMotor() {};
@@ -96,7 +107,7 @@ public class Main {
                         System.out.println("Ingrese su Precio estimado");
                         int amount;
                         amount = sn.nextInt();
-                        System.out.println("========== Vehiculos disponibles para su presupuesto ========");
+                        System.out.println("========== Autos disponibles para su presupuesto ========");
                         vehicle.findByPrice(cars,amount);
                         System.out.println("========== Motos disponibles para su presupuesto ========");
                         vehicle.findByPrice(motocycles,amount);
@@ -104,6 +115,10 @@ public class Main {
                         vehicle.findByPrice(bycicles,amount);
                         System.out.println("========== Skateboards disponibles para su presupuesto ========");
                         vehicle.findByPrice(skateboards,amount);
+                        System.out.println("========== dirigibles disponibles para su presupuesto ========");
+                        vehicle.findByPrice(ballons,amount);
+                        System.out.println("========== avionetas disponibles para su presupuesto ========");
+                        vehicle.findByPrice(Airplanes,amount);
                         System.out.println("===========================================================");
                         break;
                     case 2:
@@ -118,6 +133,10 @@ public class Main {
                         vehicle.findByModel(bycicles,model);
                         System.out.println("========== Skateboards disponibles por Modelo ========");
                         vehicle.findByModel(skateboards,model);
+                        System.out.println("========== dirigibles disponibles para su presupuesto ========");
+                        vehicle.findByModel(ballons,model);
+                        System.out.println("========== avionetas disponibles para su presupuesto ========");
+                        vehicle.findByModel(Airplanes,model);
                         System.out.println("===========================================================");
                         break;
                     case 3:
@@ -128,6 +147,10 @@ public class Main {
                         vehicleMotor.findByEngine(cars,var);
                         System.out.println("========== Motos disponibles por Motor ========");
                         vehicleMotor.findByEngine(motocycles,var);
+                        System.out.println("========== dirigibles disponibles por Motor ========");
+                        vehicleMotor.findByEngine(ballons,var);
+                        System.out.println("========== avionetas disponibles por Motor ========");
+                        vehicleMotor.findByEngine(Airplanes,var);
                         System.out.println("===========================================================");
                         break;
                     case 4:
@@ -142,6 +165,10 @@ public class Main {
                         vehicle.findByColor(bycicles,col);
                         System.out.println("========== Skateboards disponibles por color ========");
                         vehicle.findByColor(skateboards,col);
+                        System.out.println("========== dirigibles disponibles por color ========");
+                        vehicle.findByColor(ballons,col);
+                        System.out.println("========== avionetas disponibles por color ========");
+                        vehicle.findByColor(Airplanes,col);
                         System.out.println("===========================================================");
                         break;
                     case 5:
