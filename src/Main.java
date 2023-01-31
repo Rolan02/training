@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Vehicle toyota = new Car("Toyota","blanco",2010,25000,"v6", 1241, 4);
-        Vehicle mazda = new Car("Mazda","gris",2015,15000,"v6", 1241, 6);
-        Vehicle mitsubishi = new Car("mitsubishi","amarillo",2020,35000,"v6", 1241, 7);
-        Vehicle bmw = new Car("bmw","blanco",2015,25000,"v8", 1241, 3);
-        Vehicle mercedesBenz = new Car("mercedesBenz","verde",2020,18000,"v8", 1241, 8);
+        Vehicle toyota = new Car("Toyota","blanco",2010,25000,"v6", 4);
+        Vehicle mazda = new Car("Mazda","gris",2015,15000,"v6", 6);
+        Vehicle mitsubishi = new Car("mitsubishi","amarillo",2020,35000,"v6", 7);
+        Vehicle bmw = new Car("bmw","blanco",2015,25000,"v8", 3);
+        Vehicle mercedesBenz = new Car("mercedesBenz","verde",2020,18000,"v8", 8);
 
         Vehicle venzo = new Bycicle("venzo","blanco",2010,2000,2);
         Vehicle venzito = new Bycicle("venzito","negro",2015,1200,2);
@@ -17,11 +17,11 @@ public class Main {
         Vehicle sport = new Bycicle("sport","gris",2020,3500,4);
         Vehicle argon = new Bycicle("argon","verde",2005,3000,1);
 
-        Vehicle pegasus = new Motocycle("pegasus","verde",2010,1800,"v6", 1241,4);
-        Vehicle suzuki = new Motocycle("suzuki","amarillo",2015,11000,"v8", 1241,2);
-        Vehicle junior = new Motocycle("junior","verde",2020,1900,"v6", 1241,3);
-        Vehicle pong = new Motocycle("pong","negro",2022,1600,"v8", 1241,2);
-        Vehicle dior = new Motocycle("dior","blanco",2005,1200,"v6", 1241,1);
+        Vehicle pegasus = new Motocycle("pegasus","verde",2010,1800,"v6", 4);
+        Vehicle suzuki = new Motocycle("suzuki","amarillo",2015,11000,"v8", 2);
+        Vehicle junior = new Motocycle("junior","verde",2020,1900,"v6", 3);
+        Vehicle pong = new Motocycle("pong","negro",2022,1600,"v8", 2);
+        Vehicle dior = new Motocycle("dior","blanco",2005,1200,"v6", 1);
 
         Vehicle capix = new Skateboard("capix","Cafe",2018,1300,15, 1);
         Vehicle nikeSb = new Skateboard("nikeSb","rojo",2015,1500,17, 1);
