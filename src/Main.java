@@ -5,29 +5,33 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Vehicle toyota = new Car("Toyota","blanco",2010,25000,"v6", 1241);
-        Vehicle mazda = new Car("Mazda","gris",2015,15000,"v6", 1241);
-        Vehicle mitsubishi = new Car("mitsubishi","amarillo",2020,35000,"v6", 1241);
-        Vehicle bmw = new Car("bmw","blanco",2015,25000,"v8", 1241);
-        Vehicle mercedesBenz = new Car("mercedesBenz","verde",2020,18000,"v8", 1241);
+        Vehicle toyota = new Car("Toyota","blanco",2010,25000,"v6", 1241, 4);
+        Vehicle mazda = new Car("Mazda","gris",2015,15000,"v6", 1241, 6);
+        Vehicle mitsubishi = new Car("mitsubishi","amarillo",2020,35000,"v6", 1241, 7);
+        Vehicle bmw = new Car("bmw","blanco",2015,25000,"v8", 1241, 3);
+        Vehicle mercedesBenz = new Car("mercedesBenz","verde",2020,18000,"v8", 1241, 8);
 
-        Vehicle venzo = new Bycicle("venzo","blanco",2010,2000);
-        Vehicle venzito = new Bycicle("venzito","negro",2015,1200);
-        Vehicle veloshe = new Bycicle("veloshe","amarillo",2018,2500);
-        Vehicle sport = new Bycicle("sport","gris",2020,3500);
-        Vehicle argon = new Bycicle("argon","verde",2005,3000);
+        Vehicle venzo = new Bycicle("venzo","blanco",2010,2000,2);
+        Vehicle venzito = new Bycicle("venzito","negro",2015,1200,2);
+        Vehicle veloshe = new Bycicle("veloshe","amarillo",2018,2500,3);
+        Vehicle sport = new Bycicle("sport","gris",2020,3500,4);
+        Vehicle argon = new Bycicle("argon","verde",2005,3000,1);
 
-        Vehicle pegasus = new Motocycle("pegasus","verde",2010,1800,"v6", 1241);
-        Vehicle suzuki = new Motocycle("suzuki","amarillo",2015,11000,"v8", 1241);
-        Vehicle junior = new Motocycle("junior","verde",2020,1900,"v6", 1241);
-        Vehicle pong = new Motocycle("pong","negro",2022,1600,"v8", 1241);
-        Vehicle dior = new Motocycle("dior","blanco",2005,1200,"v6", 1241);
+        Vehicle pegasus = new Motocycle("pegasus","verde",2010,1800,"v6", 1241,4);
+        Vehicle suzuki = new Motocycle("suzuki","amarillo",2015,11000,"v8", 1241,2);
+        Vehicle junior = new Motocycle("junior","verde",2020,1900,"v6", 1241,3);
+        Vehicle pong = new Motocycle("pong","negro",2022,1600,"v8", 1241,2);
+        Vehicle dior = new Motocycle("dior","blanco",2005,1200,"v6", 1241,1);
 
-        Vehicle capix = new Skateboard("capix","Cafe",2018,1300,15);
-        Vehicle nikeSb = new Skateboard("nikeSb","rojo",2015,1500,17);
-        Vehicle circar = new Skateboard("circar","negro",2015,1650,14);
-        Vehicle rbk = new Skateboard("rbk","gris",2020,1960,13);
-        Vehicle baker = new Skateboard("baker","verde",2022,10200,12);
+        Vehicle capix = new Skateboard("capix","Cafe",2018,1300,15, 1);
+        Vehicle nikeSb = new Skateboard("nikeSb","rojo",2015,1500,17, 1);
+        Vehicle circar = new Skateboard("circar","negro",2015,1650,14, 1);
+        Vehicle rbk = new Skateboard("rbk","gris",2020,1960,13, 2);
+        Vehicle baker = new Skateboard("baker","verde",2022,10200,12,1);
+
+        Vehicle rex = new Balloon("rex","Cafe",2018,1300,8,10);
+        Vehicle titan = new Balloon("titan","rojo",2015,1500,7,9);
+        Vehicle fury = new Balloon("fury","negro",2015,1650,15,20);
 
         List<Vehicle> cars = new ArrayList<>();
         cars.add(toyota);
@@ -57,10 +61,16 @@ public class Main {
         skateboards.add(rbk);
         skateboards.add(baker);
 
+        List<Vehicle> ballons = new ArrayList<>();
+        ballons.add(rex);
+        ballons.add(titan);
+        ballons.add(fury);
+
         IVehicle vehicle = new IVehicle() {};
         IVehicleMotor vehicleMotor = new IVehicleMotor() {};
         IVehicleSice vehicleSice = new IVehicleSice() {};
 
+        IVehicleCapacity vehicleCapacity = new IVehicleCapacity() {};
 
         Scanner sn = new Scanner(System.in);
         Scanner read = new Scanner(System.in);
@@ -74,7 +84,8 @@ public class Main {
             System.out.println("3.- Buscar por motor");
             System.out.println("4.- Buscar por color");
             System.out.println("5.- Buscar por tamaño");
-            System.out.println("6.- Salir");
+            System.out.println("6.- Buscar por Capacidad");
+            System.out.println("7.- Salir");
 
             try {
                 System.out.println("Escribe una de las opciones");
@@ -141,10 +152,17 @@ public class Main {
                         vehicleSice.findBySice(skateboards,sice);
                         break;
                     case 6:
+                        System.out.println("Ingrese la capacidad del globo que desea");
+                        int capacity;
+                        capacity = sn.nextInt();
+                        System.out.println("========== Globo disponibles por Tamaño ========");
+                        vehicleCapacity.findByCapacity(ballons,capacity);
+                        break;
+                    case 7:
                         exit = true;
                         break;
                     default:
-                        System.out.println("Solo opciones de 1 a 4");
+                        System.out.println("Solo opciones de 1 a 7");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Opcion incorrecta ingresa un numero");
