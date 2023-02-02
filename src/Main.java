@@ -38,6 +38,12 @@ public class Main {
         Vehicle bombardier = new Airplane("bombardier","negro",15000,15,15,20);
         Vehicle airbus = new Airplane("airbus","verde",2012,10000,10,20);
 
+        Vehicle volvo = new Truck("volvo","verde",2010,18000,"v6", 4,40);
+        Vehicle scania = new Truck("scania","amarillo",2015,11000,"v8", 2,5);
+        Vehicle isuzu = new Truck("isuzu","verde",2020,1900,"v6", 3,10);
+        Vehicle nissan = new Truck("nissan","negro",2022,1600,"v8", 2,15);
+        Vehicle mitsubi = new Truck("mitsubi", "blanco", 2003, 500000, "v8", 3, 80);
+
         List<Vehicle> cars = new ArrayList<>();
         cars.add(toyota);
         cars.add(mitsubishi);
@@ -77,6 +83,14 @@ public class Main {
         Airplanes.add(bombardier);
         Airplanes.add(airbus);
 
+        List<Vehicle> Truck = new ArrayList<>();
+        Truck.add(volvo);
+        Truck.add(scania);
+        Truck.add(isuzu);
+        Truck.add(nissan); 
+        Truck.add(mitsubi);
+
+
         IVehicle vehicle = new IVehicle() {};
         IVehicleMotor vehicleMotor = new IVehicleMotor() {};
         IVehicleSice vehicleSice = new IVehicleSice() {};
@@ -96,7 +110,8 @@ public class Main {
             System.out.println("4.- Buscar por color");
             System.out.println("5.- Buscar por tamaño");
             System.out.println("6.- Buscar por Capacidad");
-            System.out.println("7.- Salir");
+            System.out.println("7.- Buscar por Tonelaje");
+            System.out.println("8.- Salir");
 
             try {
                 System.out.println("Escribe una de las opciones");
@@ -119,6 +134,8 @@ public class Main {
                         vehicle.findByPrice(ballons,amount);
                         System.out.println("========== avionetas disponibles para su presupuesto ========");
                         vehicle.findByPrice(Airplanes,amount);
+                        System.out.println("========== Camiones disponibles para su presupuesto ========");
+                        vehicle.findByPrice(Truck,amount);
                         System.out.println("===========================================================");
                         break;
                     case 2:
@@ -137,6 +154,8 @@ public class Main {
                         vehicle.findByModel(ballons,model);
                         System.out.println("========== avionetas disponibles para su presupuesto ========");
                         vehicle.findByModel(Airplanes,model);
+                        System.out.println("========== Camiones disponibles por Modelo ========");
+                        vehicle.findByModel(Truck,model);
                         System.out.println("===========================================================");
                         break;
                     case 3:
@@ -151,6 +170,8 @@ public class Main {
                         vehicleMotor.findByEngine(ballons,var);
                         System.out.println("========== avionetas disponibles por Motor ========");
                         vehicleMotor.findByEngine(Airplanes,var);
+                        System.out.println("========== Camiones disponibles por Motor ========");
+                        vehicleMotor.findByEngine(Truck,var);
                         System.out.println("===========================================================");
                         break;
                     case 4:
@@ -169,6 +190,8 @@ public class Main {
                         vehicle.findByColor(ballons,col);
                         System.out.println("========== avionetas disponibles por color ========");
                         vehicle.findByColor(Airplanes,col);
+                        System.out.println("========== Camiones disponibles por color ========");
+                        vehicle.findByColor(Truck,col);
                         System.out.println("===========================================================");
                         break;
                     case 5:
@@ -186,10 +209,16 @@ public class Main {
                         vehicleCapacity.findByCapacity(ballons,capacity);
                         break;
                     case 7:
+                        System.out.println("ingrese la tonelada que desee");
+                        int ton;
+                        ton = sn.nextInt();
+                        System.out.println("========== Camiones disponibles por tonelada ========");
+                        
+                    case 8:
                         exit = true;
                         break;
                     default:
-                        System.out.println("Solo opciones de 1 a 7");
+                        System.out.println("Solo opciones de 1 a 8");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Opcion incorrecta ingresa un numero");
