@@ -1,5 +1,6 @@
 package accessories;
 
 public class Aro  {
-    private int aro;
+    private int sice;
+    private int price;
 }

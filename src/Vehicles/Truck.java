@@ -14,7 +14,7 @@ public class Truck extends VehicleMotor implements IVehicle, IVehicleMotor {
     @Override
     public String toString() {
         return "Nombre: " + getName() + "\nModelo: " + getModel() + "\naccessories.Color: " + getColor() +
-                "\nMotor: " + getEngine()+ "\nPasajero: " + getPasajer() + "\nTonelaje: "+ getQuantity() +"\nLlanta: " + getLlanta() + "\naccessories.Aro: " + getAro() + "\n";
+                "\nMotor: " + getEngine()+ "\nPasajero: " + getPasajer() + "\nTonelaje: "+ getQuantity() + "\n";
     }
 
     public int getQuantity() {
