@@ -1,3 +1,6 @@
+import Vehicles.*;
+import funcionality.*;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -110,7 +113,7 @@ public class Main {
             System.out.println("3.- Buscar por motor");
             System.out.println("4.- Buscar por color");
             System.out.println("5.- Buscar por tamaño");
-            System.out.println("6.- Buscar por tamaño de Aro");
+            System.out.println("6.- Buscar por tamaño de accessories.Aro");
             System.out.println("7.- Buscar por Capacidad");
             System.out.println("8.- Buscar por Tonelaje");
             System.out.println("9.- Salir");
@@ -177,7 +180,7 @@ public class Main {
                         System.out.println("===========================================================");
                         break;
                     case 4:
-                        System.out.println("========== Vehiculos disponibles por Color ========");
+                        System.out.println("========== Vehiculos disponibles por accessories.Color ========");
                         String color = read.next();
                         String col = color.toLowerCase();
                         System.out.println("========== Autos disponibles por color ========");
@@ -207,13 +210,13 @@ public class Main {
                         System.out.println("Ingrese el tamaño de aro que desea");
                         int aro;
                         aro = sn.nextInt();
-                        System.out.println("========== Vehiculos disponibles por Tamaño de Aro ========");
+                        System.out.println("========== Vehiculos disponibles por Tamaño de accessories.Aro ========");
                         VehicleAro.findByAro(cars,aro);
-                        System.out.println("========== Motos disponibles por Tamaño de Aro  ========");
+                        System.out.println("========== Motos disponibles por Tamaño de accessories.Aro  ========");
                         VehicleAro.findByAro(motocycles,aro);
-                        System.out.println("========== Bicicletas disponibles por Tamaño de Aro  ========");
+                        System.out.println("========== Bicicletas disponibles por Tamaño de accessories.Aro  ========");
                         VehicleAro.findByAro(bycicles, aro);
-                        System.out.println("========== Camiones disponibles por Tamaño de Aro  ========");
+                        System.out.println("========== Camiones disponibles por Tamaño de accessories.Aro  ========");
                         VehicleAro.findByAro(Truck,aro);
                         System.out.println("===========================================================");
                         break;

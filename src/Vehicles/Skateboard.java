@@ -1,3 +1,7 @@
+package Vehicles;
+
+import funcionality.IVehicleSice;
+
 public class Skateboard extends VehicleSice implements IVehicleSice {
 
     public Skateboard(String name, String color, int model, int price, int sice, int pasajer, int llanta, int aro) {
@@ -6,7 +10,7 @@ public class Skateboard extends VehicleSice implements IVehicleSice {
 
     @Override
         public String toString() {
-        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor() +
+        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\naccessories.Color: " + getColor() +
                 "\nTamaño: " + getSice()+ "\nPasajero: " + getPasajer() + "\nLlanta: " + getLlanta() + "\n";
         }
 

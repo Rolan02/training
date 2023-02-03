@@ -1,4 +1,6 @@
-import java.util.List;
+package Vehicles;
+
+import funcionality.IVehicle;
 
 public class Bycicle extends Vehicle implements IVehicle {
 
@@ -7,7 +9,7 @@ public class Bycicle extends Vehicle implements IVehicle {
     }
     @Override
     public String toString() {
-        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor() +
-                "\nPasajero: " + getPasajer() + "\nLlanta: " + getLlanta() + "\nAro: " + getAro() + "\n";
+        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\naccessories.Color: " + getColor() +
+                "\nPasajero: " + getPasajer() + "\nLlanta: " + getLlanta() + "\naccessories.Aro: " + getAro() + "\n";
     }
 }
