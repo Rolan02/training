@@ -1,3 +1,7 @@
+package funcionality;
+
+import Vehicles.Vehicle;
+
 import java.util.List;
 
 public interface IVehicle {

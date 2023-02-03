@@ -1,3 +1,5 @@
+package Vehicles;
+
 public class VehicleMotor extends Vehicle {
     private String engine;
 

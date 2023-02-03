@@ -1,3 +1,5 @@
+package Vehicles;
+
 public class Vehicle {
     private String name;
     private String color;

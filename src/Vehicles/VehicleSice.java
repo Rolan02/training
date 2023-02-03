@@ -1,3 +1,5 @@
+package Vehicles;
+
 public class VehicleSice extends Vehicle {
     private int sice;
 

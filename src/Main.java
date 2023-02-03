@@ -1,4 +1,8 @@
 import Vehicles.*;
+import funcionality.IVehicle;
+import funcionality.IVehicleCapacity;
+import funcionality.IVehicleMotor;
+import funcionality.IVehicleSice;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

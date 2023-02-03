@@ -1,3 +1,5 @@
+package Vehicles;
+
 public class VehicleCapacity extends Vehicle {
     private int capacity;
 

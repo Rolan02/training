@@ -1,6 +1,6 @@
 package Vehicles;
 
-import funcionality.IVehicleCapacity.*;
+import funcionality.IVehicleCapacity;
 
 public class Balloon extends VehicleCapacity implements IVehicleCapacity {
 
