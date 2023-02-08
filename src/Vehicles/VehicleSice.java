@@ -1,9 +1,11 @@
 package Vehicles;
 
+import accessories.Color;
+
 public class VehicleSice extends Vehicle {
     private int sice;
 
-    public VehicleSice(String name, String color, int model, int price, int sice, int pasajer) {
+    public VehicleSice(String name, Color color, int model, int price, int sice, int pasajer) {
         super(name, color, model, price, pasajer);
         this.sice = sice;
     }

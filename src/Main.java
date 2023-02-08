@@ -1,4 +1,5 @@
 import Vehicles.*;
+import accessories.Color;
 import funcionality.IVehicle;
 import funcionality.IVehicleCapacity;
 import funcionality.IVehicleMotor;
@@ -11,44 +12,50 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Vehicle toyota = new Car("Toyota","blanco",2010,25000,"v6", 4);
-        Vehicle mazda = new Car("Mazda","gris",2015,15000,"v6", 6);
-        Vehicle mitsubishi = new Car("mitsubishi","amarillo",2020,35000,"v6", 7);
-        Vehicle bmw = new Car("bmw","blanco",2015,25000,"v8", 3);
-        Vehicle mercedesBenz = new Car("mercedesBenz","verde",2020,18000,"v8", 8);
+        Color blanco = new Color("blanco", 50);
+        Color negro = new Color("negro", 150);
+        Color amarillo = new Color("amarillo", 75);
+        Color verde = new Color("verde", 85);
+        Color gris = new Color("gris", 300);
 
-        Vehicle venzo = new Bycicle("venzo","blanco",2010,2000,2);
-        Vehicle venzito = new Bycicle("venzito","negro",2015,1200,2);
-        Vehicle veloshe = new Bycicle("veloshe","amarillo",2018,2500,3);
-        Vehicle sport = new Bycicle("sport","gris",2020,3500,4);
-        Vehicle argon = new Bycicle("argon","verde",2005,3000,1);
+        Vehicle toyota = new Car("Toyota",blanco,2010,25000,"v6", 4);
+        Vehicle mazda = new Car("Mazda",negro,2015,15000,"v6", 6);
+        Vehicle mitsubishi = new Car("mitsubishi",amarillo,2020,35000,"v6", 7);
+        Vehicle bmw = new Car("bmw",blanco,2015,25000,"v8", 3);
+        Vehicle mercedesBenz = new Car("mercedesBenz",verde,2020,18000,"v8", 8);
 
-        Vehicle pegasus = new Motocycle("pegasus","verde",2010,1800,"v6", 4);
-        Vehicle suzuki = new Motocycle("suzuki","amarillo",2015,11000,"v8", 2);
-        Vehicle junior = new Motocycle("junior","verde",2020,1900,"v6", 3);
-        Vehicle pong = new Motocycle("pong","negro",2022,1600,"v8", 2);
-        Vehicle dior = new Motocycle("dior","blanco",2005,1200,"v6", 1);
+        Vehicle venzo = new Bycicle("venzo",blanco,2010,2000,2);
+        Vehicle venzito = new Bycicle("venzito",negro,2015,1200,2);
+        Vehicle veloshe = new Bycicle("veloshe",amarillo,2018,2500,3);
+        Vehicle sport = new Bycicle("sport",gris,2020,3500,4);
+        Vehicle argon = new Bycicle("argon",verde,2005,3000,1);
 
-        Vehicle capix = new Skateboard("capix","Cafe",2018,1300,15, 1);
-        Vehicle nikeSb = new Skateboard("nikeSb","rojo",2015,1500,17, 1);
-        Vehicle circar = new Skateboard("circar","negro",2015,1650,14, 1);
-        Vehicle rbk = new Skateboard("rbk","gris",2020,1960,13, 2);
-        Vehicle baker = new Skateboard("baker","verde",2022,10200,12,1);
+        Vehicle pegasus = new Motocycle("pegasus",verde,2010,1800,"v6", 4);
+        Vehicle suzuki = new Motocycle("suzuki",amarillo,2015,11000,"v8", 2);
+        Vehicle junior = new Motocycle("junior",verde,2020,1900,"v6", 3);
+        Vehicle pong = new Motocycle("pong",negro,2022,1600,"v8", 2);
+        Vehicle dior = new Motocycle("dior",blanco,2005,1200,"v6", 1);
 
-        Vehicle rex = new Balloon("rex","Cafe",2018,1300,8,10);
-        Vehicle titan = new Balloon("titan","rojo",2015,1500,7,9);
-        Vehicle fury = new Balloon("fury","negro",2015,1650,15,20);
+        Vehicle capix = new Skateboard("capix",negro,2018,1300,15, 1);
+        Vehicle nikeSb = new Skateboard("nikeSb",blanco,2015,1500,17, 1);
+        Vehicle circar = new Skateboard("circar",negro,2015,1650,14, 1);
+        Vehicle rbk = new Skateboard("rbk",gris,2020,1960,13, 2);
+        Vehicle baker = new Skateboard("baker",verde,2022,10200,12,1);
 
-        Vehicle cessna = new Airplane("cessna","rojo",2022,22000,20,20);
-        Vehicle boeing = new Airplane("boeing","gris",2020,25000,25,25);
-        Vehicle bombardier = new Airplane("bombardier","negro",15000,15,15,20);
-        Vehicle airbus = new Airplane("airbus","verde",2012,10000,10,20);
+        Vehicle rex = new Balloon("rex",gris,2018,1300,8,10);
+        Vehicle titan = new Balloon("titan",blanco,2015,1500,7,9);
+        Vehicle fury = new Balloon("fury",negro,2015,1650,15,20);
 
-        Vehicle volvo = new Truck("volvo","verde",2010,18000,"v6", 4,40);
-        Vehicle scania = new Truck("scania","amarillo",2015,11000,"v8", 2,5);
-        Vehicle isuzu = new Truck("isuzu","verde",2020,1900,"v6", 3,10);
-        Vehicle nissan = new Truck("nissan","negro",2022,1600,"v8", 2,15);
-        Vehicle mitsubi = new Truck("mitsubi", "blanco", 2003, 500000, "v8", 3, 80);
+        Vehicle cessna = new Airplane("cessna",blanco,2022,22000,20,20);
+        Vehicle boeing = new Airplane("boeing",gris,2020,25000,25,25);
+        Vehicle bombardier = new Airplane("bombardier",negro,15000,15,15,20);
+        Vehicle airbus = new Airplane("airbus",verde,2012,10000,10,20);
+
+        Vehicle volvo = new Truck("volvo",verde,2010,18000,"v6", 4,40);
+        Vehicle scania = new Truck("scania",amarillo,2015,11000,"v8", 2,5);
+        Vehicle isuzu = new Truck("isuzu",verde,2020,1900,"v6", 3,10);
+        Vehicle nissan = new Truck("nissan",negro,2022,1600,"v8", 2,15);
+        Vehicle mitsubi = new Truck("mitsubi", blanco, 2003, 500000, "v8", 3, 80);
 
         List<Vehicle> cars = new ArrayList<>();
         cars.add(toyota);
@@ -181,7 +188,7 @@ public class Main {
                         System.out.println("===========================================================");
                         break;
                     case 4:
-                        System.out.println("========== Vehiculos disponibles por accessories.Color ========");
+                        System.out.println("========== Vehiculos disponibles por Color ========");
                         String color = read.next();
                         String col = color.toLowerCase();
                         System.out.println("========== Autos disponibles por color ========");

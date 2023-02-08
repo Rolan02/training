@@ -10,7 +10,7 @@ public interface IVehicle {
     }
 
     default void findByColor(List<Vehicle> vehicle, String color) {
-        vehicle.stream().filter(car -> car.getColor().equals(color)).forEach(System.out::println);
+        vehicle.stream().filter(car -> car.getColor().getName().equals(color)).forEach(System.out::println);
     }
 
     default void findByPrice(List<Vehicle> vehicle, int price) {

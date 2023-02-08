@@ -1,13 +1,15 @@
 package Vehicles;
 
+import accessories.Color;
+
 public class Vehicle {
     private String name;
-    private String color;
+    private Color color;
     private int model;
     private int price;
     private int pasajer;
 
-    public Vehicle(String name, String color, int model, int price, int pasajer) {
+    public Vehicle(String name, Color color, int model, int price, int pasajer) {
         this.name = name;
         this.color = color;
         this.model = model;
@@ -18,7 +20,7 @@ public class Vehicle {
         return name;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
