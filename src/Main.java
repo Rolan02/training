@@ -1,5 +1,6 @@
 import Vehicles.*;
 import accessories.Color;
+import accessories.Model;
 import funcionality.IVehicle;
 import funcionality.IVehicleCapacity;
 import funcionality.IVehicleMotor;
@@ -17,45 +18,57 @@ public class Main {
         Color amarillo = new Color("amarillo", 75);
         Color verde = new Color("verde", 85);
         Color gris = new Color("gris", 300);
+        Model one = new Model("2010", 20);
+        Model two = new Model("2015", 25);
+        Model three = new Model("2018", 50);
+        Model four = new Model("2020", 100);
+        Model five = new Model("2005", 150);
+        Model six = new Model("2022", 250);
 
-        Vehicle toyota = new Car("Toyota",blanco,2010,25000,"v6", 4);
-        Vehicle mazda = new Car("Mazda",negro,2015,15000,"v6", 6);
-        Vehicle mitsubishi = new Car("mitsubishi",amarillo,2020,35000,"v6", 7);
-        Vehicle bmw = new Car("bmw",blanco,2015,25000,"v8", 3);
-        Vehicle mercedesBenz = new Car("mercedesBenz",verde,2020,18000,"v8", 8);
 
-        Vehicle venzo = new Bycicle("venzo",blanco,2010,2000,2);
-        Vehicle venzito = new Bycicle("venzito",negro,2015,1200,2);
-        Vehicle veloshe = new Bycicle("veloshe",amarillo,2018,2500,3);
-        Vehicle sport = new Bycicle("sport",gris,2020,3500,4);
-        Vehicle argon = new Bycicle("argon",verde,2005,3000,1);
+        
+   
 
-        Vehicle pegasus = new Motocycle("pegasus",verde,2010,1800,"v6", 4);
-        Vehicle suzuki = new Motocycle("suzuki",amarillo,2015,11000,"v8", 2);
-        Vehicle junior = new Motocycle("junior",verde,2020,1900,"v6", 3);
-        Vehicle pong = new Motocycle("pong",negro,2022,1600,"v8", 2);
-        Vehicle dior = new Motocycle("dior",blanco,2005,1200,"v6", 1);
 
-        Vehicle capix = new Skateboard("capix",negro,2018,1300,15, 1);
-        Vehicle nikeSb = new Skateboard("nikeSb",blanco,2015,1500,17, 1);
-        Vehicle circar = new Skateboard("circar",negro,2015,1650,14, 1);
-        Vehicle rbk = new Skateboard("rbk",gris,2020,1960,13, 2);
-        Vehicle baker = new Skateboard("baker",verde,2022,10200,12,1);
 
-        Vehicle rex = new Balloon("rex",gris,2018,1300,8,10);
-        Vehicle titan = new Balloon("titan",blanco,2015,1500,7,9);
-        Vehicle fury = new Balloon("fury",negro,2015,1650,15,20);
+        Vehicle toyota = new Car("Toyota",blanco,one,25000,"v6", 4);
+        Vehicle mazda = new Car("Mazda",negro,two,15000,"v6", 6);
+        Vehicle mitsubishi = new Car("mitsubishi",amarillo,four,35000,"v6", 7);
+        Vehicle bmw = new Car("bmw",blanco,two,25000,"v8", 3);
+        Vehicle mercedesBenz = new Car("mercedesBenz",verde,four,18000,"v8", 8);
 
-        Vehicle cessna = new Airplane("cessna",blanco,2022,22000,20,20);
-        Vehicle boeing = new Airplane("boeing",gris,2020,25000,25,25);
-        Vehicle bombardier = new Airplane("bombardier",negro,15000,15,15,20);
-        Vehicle airbus = new Airplane("airbus",verde,2012,10000,10,20);
+        Vehicle venzo = new Bycicle("venzo",blanco,one,2000,2);
+        Vehicle venzito = new Bycicle("venzito",negro,two,1200,2);
+        Vehicle veloshe = new Bycicle("veloshe",amarillo,three,2500,3);
+        Vehicle sport = new Bycicle("sport",gris,four,3500,4);
+        Vehicle argon = new Bycicle("argon",verde,five,3000,1);
 
-        Vehicle volvo = new Truck("volvo",verde,2010,18000,"v6", 4,40);
-        Vehicle scania = new Truck("scania",amarillo,2015,11000,"v8", 2,5);
-        Vehicle isuzu = new Truck("isuzu",verde,2020,1900,"v6", 3,10);
-        Vehicle nissan = new Truck("nissan",negro,2022,1600,"v8", 2,15);
-        Vehicle mitsubi = new Truck("mitsubi", blanco, 2003, 500000, "v8", 3, 80);
+        Vehicle pegasus = new Motocycle("pegasus",verde,one,1800,"v6", 4);
+        Vehicle suzuki = new Motocycle("suzuki",amarillo,two,11000,"v8", 2);
+        Vehicle junior = new Motocycle("junior",verde,four,1900,"v6", 3);
+        Vehicle pong = new Motocycle("pong",negro,six,1600,"v8", 2);
+        Vehicle dior = new Motocycle("dior",blanco,five,1200,"v6", 1);
+
+        Vehicle capix = new Skateboard("capix",negro,three,1300,15, 1);
+        Vehicle nikeSb = new Skateboard("nikeSb",blanco,five,1500,17, 1);
+        Vehicle circar = new Skateboard("circar",negro,two,1650,14, 1);
+        Vehicle rbk = new Skateboard("rbk",gris,four,1960,13, 2);
+        Vehicle baker = new Skateboard("baker",verde,six,10200,12,1);
+
+        Vehicle rex = new Balloon("rex",gris,three,1300,8,10);
+        Vehicle titan = new Balloon("titan",blanco,two,1500,7,9);
+        Vehicle fury = new Balloon("fury",negro,two,1650,15,20);
+
+        Vehicle cessna = new Airplane("cessna",blanco,six,22000,20,20);
+        Vehicle boeing = new Airplane("boeing",gris,four,25000,25,25);
+        Vehicle bombardier = new Airplane("bombardier",negro,six,15,15,20);
+        Vehicle airbus = new Airplane("airbus",verde,one,10000,10,20);
+
+        Vehicle volvo = new Truck("volvo",verde,one,18000,"v6", 4,40);
+        Vehicle scania = new Truck("scania",amarillo,two,11000,"v8", 2,5);
+        Vehicle isuzu = new Truck("isuzu",verde,six,1900,"v6", 3,10);
+        Vehicle nissan = new Truck("nissan",negro,five,1600,"v8", 2,15);
+        Vehicle mitsubi = new Truck("mitsubi", blanco, three, 500000, "v8", 3, 80);
 
         List<Vehicle> cars = new ArrayList<>();
         cars.add(toyota);
@@ -153,22 +166,22 @@ public class Main {
                         break;
                     case 2:
                         System.out.println("Buscando por modelo........");
-                        int model;
-                        model = sn.nextInt();
+                        String model = read.next();
+                        String mode = model.toLowerCase();
                         System.out.println("========== Autos disponibles por Modelo ========");
-                        vehicle.findByModel(cars,model);
+                        vehicle.findByModel(cars,mode);
                         System.out.println("========== Motos disponibles por Modelo ========");
-                        vehicle.findByModel(motocycles,model);
+                        vehicle.findByModel(motocycles,mode);
                         System.out.println("========== Bicicletas disponibles por Modelo ========");
-                        vehicle.findByModel(bycicles,model);
+                        vehicle.findByModel(bycicles,mode);
                         System.out.println("========== Skateboards disponibles por Modelo ========");
-                        vehicle.findByModel(skateboards,model);
+                        vehicle.findByModel(skateboards,mode);
                         System.out.println("========== dirigibles disponibles para su presupuesto ========");
-                        vehicle.findByModel(ballons,model);
+                        vehicle.findByModel(ballons,mode);
                         System.out.println("========== avionetas disponibles para su presupuesto ========");
-                        vehicle.findByModel(Airplanes,model);
+                        vehicle.findByModel(Airplanes,mode);
                         System.out.println("========== Camiones disponibles por Modelo ========");
-                        vehicle.findByModel(Truck,model);
+                        vehicle.findByModel(Truck,mode);
                         System.out.println("===========================================================");
                         break;
                     case 3:
