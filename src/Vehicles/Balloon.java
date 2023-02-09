@@ -12,6 +12,6 @@ public class Balloon extends VehicleCapacity implements IVehicleCapacity {
 
     @Override
     public String toString() {
-        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\n Color: " + getColor().getName() + "\nPasajero: " + getPasajer() + "\nCapacidad: " + getCapacity() + "\n";
+        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor().getName() + "\nPasajero: " + getPasajer() + "\nCapacidad: " + getCapacity() + "\n";
     }
 }

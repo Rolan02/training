@@ -1,6 +1,7 @@
 package Vehicles;
 
 import accessories.Color;
+import accessories.Engine;
 
 public class Vehicle {
     private String name;
@@ -32,4 +33,8 @@ public class Vehicle {
         return price;
     }
     public int getPasajer() {return pasajer;}
+
+    public Engine getEngine() {
+        return null;
+    }
 }

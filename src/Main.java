@@ -1,5 +1,6 @@
 import Vehicles.*;
 import accessories.Color;
+import accessories.Engine;
 import funcionality.IVehicle;
 import funcionality.IVehicleCapacity;
 import funcionality.IVehicleMotor;
@@ -18,11 +19,18 @@ public class Main {
         Color verde = new Color("verde", 85);
         Color gris = new Color("gris", 300);
 
-        Vehicle toyota = new Car("Toyota",blanco,2010,25000,"v6", 4);
-        Vehicle mazda = new Car("Mazda",negro,2015,15000,"v6", 6);
-        Vehicle mitsubishi = new Car("mitsubishi",amarillo,2020,35000,"v6", 7);
-        Vehicle bmw = new Car("bmw",blanco,2015,25000,"v8", 3);
-        Vehicle mercedesBenz = new Car("mercedesBenz",verde,2020,18000,"v8", 8);
+        Engine v6 = new Engine("v6",1500);
+        Engine v7 = new Engine("v7",2500);
+        Engine v8 = new Engine("v8",2000);
+        Engine v4 = new Engine("v4",2500);
+        Engine v9 = new Engine("v9",3500);
+
+
+        Vehicle toyota = new Car("Toyota",blanco,2010,2500,v6, 4);
+        Vehicle mazda = new Car("Mazda",negro,2015,15000,v8, 6);
+        Vehicle mitsubishi = new Car("mitsubishi",amarillo,2020,35000,v9, 7);
+        Vehicle bmw = new Car("bmw",blanco,2015,25000,v4, 3);
+        Vehicle mercedesBenz = new Car("mercedesBenz",verde,2020,18000,v7, 8);
 
         Vehicle venzo = new Bycicle("venzo",blanco,2010,2000,2);
         Vehicle venzito = new Bycicle("venzito",negro,2015,1200,2);
@@ -30,11 +38,11 @@ public class Main {
         Vehicle sport = new Bycicle("sport",gris,2020,3500,4);
         Vehicle argon = new Bycicle("argon",verde,2005,3000,1);
 
-        Vehicle pegasus = new Motocycle("pegasus",verde,2010,1800,"v6", 4);
-        Vehicle suzuki = new Motocycle("suzuki",amarillo,2015,11000,"v8", 2);
-        Vehicle junior = new Motocycle("junior",verde,2020,1900,"v6", 3);
-        Vehicle pong = new Motocycle("pong",negro,2022,1600,"v8", 2);
-        Vehicle dior = new Motocycle("dior",blanco,2005,1200,"v6", 1);
+        Vehicle pegasus = new Motocycle("pegasus",verde,2010,1800,v6, 4);
+        Vehicle suzuki = new Motocycle("suzuki",amarillo,2015,11000,v8, 2);
+        Vehicle junior = new Motocycle("junior",verde,2020,1900,v9, 3);
+        Vehicle pong = new Motocycle("pong",negro,2022,1600,v7, 2);
+        Vehicle dior = new Motocycle("dior",blanco,2005,1200,v4, 1);
 
         Vehicle capix = new Skateboard("capix",negro,2018,1300,15, 1);
         Vehicle nikeSb = new Skateboard("nikeSb",blanco,2015,1500,17, 1);
@@ -51,11 +59,11 @@ public class Main {
         Vehicle bombardier = new Airplane("bombardier",negro,15000,15,15,20);
         Vehicle airbus = new Airplane("airbus",verde,2012,10000,10,20);
 
-        Vehicle volvo = new Truck("volvo",verde,2010,18000,"v6", 4,40);
-        Vehicle scania = new Truck("scania",amarillo,2015,11000,"v8", 2,5);
-        Vehicle isuzu = new Truck("isuzu",verde,2020,1900,"v6", 3,10);
-        Vehicle nissan = new Truck("nissan",negro,2022,1600,"v8", 2,15);
-        Vehicle mitsubi = new Truck("mitsubi", blanco, 2003, 500000, "v8", 3, 80);
+        Vehicle volvo = new Truck("volvo",verde,2010,18000,v8, 4,40);
+        Vehicle scania = new Truck("scania",amarillo,2015,11000,v9, 2,5);
+        Vehicle isuzu = new Truck("isuzu",verde,2020,1900,v4, 3,10);
+        Vehicle nissan = new Truck("nissan",negro,2022,1600,v7, 2,15);
+        Vehicle mitsubi = new Truck("mitsubi", blanco, 2003, 500000, v6, 3, 80);
 
         List<Vehicle> cars = new ArrayList<>();
         cars.add(toyota);
@@ -179,10 +187,10 @@ public class Main {
                         vehicleMotor.findByEngine(cars,var);
                         System.out.println("========== Motos disponibles por Motor ========");
                         vehicleMotor.findByEngine(motocycles,var);
-                        System.out.println("========== dirigibles disponibles por Motor ========");
+                        /*System.out.println("========== dirigibles disponibles por Motor ========");
                         vehicleMotor.findByEngine(ballons,var);
                         System.out.println("========== avionetas disponibles por Motor ========");
-                        vehicleMotor.findByEngine(Airplanes,var);
+                        vehicleMotor.findByEngine(Airplanes,var);*/
                         System.out.println("========== Camiones disponibles por Motor ========");
                         vehicleMotor.findByEngine(Truck,var);
                         System.out.println("===========================================================");

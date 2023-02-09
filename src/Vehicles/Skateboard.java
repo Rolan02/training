@@ -11,7 +11,7 @@ public class Skateboard extends VehicleSice implements IVehicleSice {
 
     @Override
         public String toString() {
-        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\n Color: " + getColor().getName() +
+        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor().getName() +
                 "\nTamaño: " + getSice()+ "\nPasajero: " + getPasajer() + "\n";
         }
 

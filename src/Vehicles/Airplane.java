@@ -11,7 +11,7 @@ public class Airplane extends VehicleCapacity implements IVehicleCapacity {
 
     @Override
     public String toString() {
-        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\n Color: " + getColor().getName() +
+        return "Nombre: " + getName() + "\nModelo: " + getModel() + "\nColor: " + getColor().getName() +
                 "\nPasajero: " + getPasajer() + "\nCapacidad: " + getCapacity()  + "\n";
     }
 }
