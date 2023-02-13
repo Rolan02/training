@@ -5,8 +5,8 @@ import Vehicles.Vehicle;
 import java.util.List;
 
 public interface IVehicle {
-    default void findByModel(List<Vehicle> vehicle, int model) {
-        vehicle.stream().filter(car -> car.getModel() == model).forEach(System.out::println);
+    default void findByModel(List<Vehicle> vehicle, String model) {
+        vehicle.stream().filter(car -> car.getModel().getName().equals (model)).forEach(System.out::println);
     }
 
     default void findByColor(List<Vehicle> vehicle, String color) {
