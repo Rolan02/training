@@ -1,16 +1,16 @@
 package Vehicles;
 
 import accessories.Color;
-import accessories.Engine;
+import accessories.Model;
 
 public class Vehicle {
     private String name;
     private Color color;
-    private int model;
+    private Model model;
     private int price;
     private int pasajer;
 
-    public Vehicle(String name, Color color, int model, int price, int pasajer) {
+    public Vehicle(String name, Color color, Model model, int price, int pasajer) {
         this.name = name;
         this.color = color;
         this.model = model;
@@ -25,7 +25,7 @@ public class Vehicle {
         return color;
     }
 
-    public int getModel() {
+    public Model getModel() {
         return model;
     }
 
@@ -33,8 +33,4 @@ public class Vehicle {
         return price;
     }
     public int getPasajer() {return pasajer;}
-
-    public Engine getEngine() {
-        return null;
-    }
 }
