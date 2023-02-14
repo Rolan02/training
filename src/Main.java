@@ -2,6 +2,7 @@ import Vehicles.*;
 import accessories.Color;
 import accessories.Engine;
 import accessories.Model;
+import accessories.Passenger;
 import funcionality.IVehicle;
 import funcionality.IVehicleCapacity;
 import funcionality.IVehicleMotor;
@@ -33,45 +34,49 @@ public class Main {
         Engine v4 = new Engine("v4",2500);
         Engine v9 = new Engine("v9",3500);
 
+        Passenger uno = new Passenger(1, 100);
+        Passenger dos = new Passenger(2, 200);
+        Passenger cuatro = new Passenger(4, 400);
+        Passenger seis = new Passenger(6, 600);
 
-        Vehicle toyota = new Car("Toyota",blanco,one,2500,v6, 4);
-        Vehicle mazda = new Car("Mazda",negro,two,15000,v8, 6);
-        Vehicle mitsubishi = new Car("mitsubishi",amarillo,four,35000,v9, 7);
-        Vehicle bmw = new Car("bmw",blanco,two,25000,v4, 3);
-        Vehicle mercedesBenz = new Car("mercedesBenz",verde,four,18000,v7, 8);
+        Vehicle toyota = new Car("Toyota",blanco,one,2500,v6, cuatro);
+        Vehicle mazda = new Car("Mazda",negro,two,15000,v8,seis);
+        Vehicle mitsubishi = new Car("mitsubishi",amarillo,four,35000,v9,cuatro);
+        Vehicle bmw = new Car("bmw",blanco,two,25000,v4, dos);
+        Vehicle mercedesBenz = new Car("mercedesBenz",verde,four,18000,v7, uno);
 
-        Vehicle pegasus = new Motocycle("pegasus",verde,one,1800,v6, 4);
-        Vehicle suzuki = new Motocycle("suzuki",amarillo,two,11000,v8, 2);
-        Vehicle junior = new Motocycle("junior",verde,four,1900,v9, 3);
-        Vehicle pong = new Motocycle("pong",negro,six,1600,v7, 2);
-        Vehicle dior = new Motocycle("dior",blanco,five,1200,v4, 1);
+        Vehicle pegasus = new Motocycle("pegasus",verde,one,1800,v6, cuatro);
+        Vehicle suzuki = new Motocycle("suzuki",amarillo,two,11000,v8, uno);
+        Vehicle junior = new Motocycle("junior",verde,four,1900,v9, seis);
+        Vehicle pong = new Motocycle("pong",negro,six,1600,v7, dos);
+        Vehicle dior = new Motocycle("dior",blanco,five,1200,v4, uno);
 
-        Vehicle venzo = new Bycicle("venzo",blanco,one,2000,2);
-        Vehicle venzito = new Bycicle("venzito",negro,two,1200,2);
-        Vehicle veloshe = new Bycicle("veloshe",amarillo,three,2500,3);
-        Vehicle sport = new Bycicle("sport",gris,four,3500,4);
-        Vehicle argon = new Bycicle("argon",verde,five,3000,1);
+        Vehicle venzo = new Bycicle("venzo",blanco,one,2000,uno);
+        Vehicle venzito = new Bycicle("venzito",negro,two,1200,dos);
+        Vehicle veloshe = new Bycicle("veloshe",amarillo,three,2500,cuatro);
+        Vehicle sport = new Bycicle("sport",gris,four,3500,seis);
+        Vehicle argon = new Bycicle("argon",verde,five,3000,seis);
 
-        Vehicle capix = new Skateboard("capix",negro,three,1300,15, 1);
-        Vehicle nikeSb = new Skateboard("nikeSb",blanco,five,1500,17, 1);
-        Vehicle circar = new Skateboard("circar",negro,two,1650,14, 1);
-        Vehicle rbk = new Skateboard("rbk",gris,four,1960,13, 2);
-        Vehicle baker = new Skateboard("baker",verde,six,10200,12,1);
+        Vehicle capix = new Skateboard("capix",negro,three,1300,15, uno);
+        Vehicle nikeSb = new Skateboard("nikeSb",blanco,five,1500,17, uno);
+        Vehicle circar = new Skateboard("circar",negro,two,1650,14, cuatro);
+        Vehicle rbk = new Skateboard("rbk",gris,four,1960,13, seis);
+        Vehicle baker = new Skateboard("baker",verde,six,10200,12,dos);
 
-        Vehicle rex = new Balloon("rex",gris,three,1300,8,10);
-        Vehicle titan = new Balloon("titan",blanco,two,1500,7,9);
-        Vehicle fury = new Balloon("fury",negro,two,1650,15,20);
+        Vehicle rex = new Balloon("rex",gris,three,1300,seis,10);
+        Vehicle titan = new Balloon("titan",blanco,two,1500,seis,9);
+        Vehicle fury = new Balloon("fury",negro,two,1650,cuatro,20);
 
-        Vehicle cessna = new Airplane("cessna",blanco,six,22000,20,20);
-        Vehicle boeing = new Airplane("boeing",gris,four,25000,25,25);
-        Vehicle bombardier = new Airplane("bombardier",negro,six,15,15,20);
-        Vehicle airbus = new Airplane("airbus",verde,one,10000,10,20);
+        Vehicle cessna = new Airplane("cessna",blanco,six,22000,seis,20);
+        Vehicle boeing = new Airplane("boeing",gris,four,25000,seis,25);
+        Vehicle bombardier = new Airplane("bombardier",negro,six,15,cuatro,20);
+        Vehicle airbus = new Airplane("airbus",verde,one,10000,uno,20);
 
-        Vehicle volvo = new Truck("volvo",verde,one,18000,v8, 4,40);
-        Vehicle scania = new Truck("scania",amarillo,two,11000,v9, 2,5);
-        Vehicle isuzu = new Truck("isuzu",verde,six,1900,v4, 3,10);
-        Vehicle nissan = new Truck("nissan",negro,five,1600,v7, 2,15);
-        Vehicle mitsubi = new Truck("mitsubi", blanco, three, 500000, v6, 3, 80);
+        Vehicle volvo = new Truck("volvo",verde,one,18000,v8, cuatro,40);
+        Vehicle scania = new Truck("scania",amarillo,two,11000,v9, dos,5);
+        Vehicle isuzu = new Truck("isuzu",verde,six,1900,v4, seis,10);
+        Vehicle nissan = new Truck("nissan",negro,five,1600,v7, dos,15);
+        Vehicle mitsubi = new Truck("mitsubi", blanco, three, 500000, v6, seis, 80);
 
         List<Vehicle> cars = new ArrayList<>();
         cars.add(toyota);
