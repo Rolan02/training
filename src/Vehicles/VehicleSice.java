@@ -1,5 +1,4 @@
 package Vehicles;
-
 import accessories.Color;
 import accessories.Model;
 
